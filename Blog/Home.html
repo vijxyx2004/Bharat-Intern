@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: rgba(235, 228, 228, 0.1);
+      }
+      .navbar {
+        padding: 10px 0px;
+        margin-bottom: 0px;
+        height: 5vh;
+        background: rgb(224, 195, 195);
+      }
+      .logo {
+        width: 40%;
+        margin-right: 40%;
+        margin-left: 1%;
+      }
+      .logo-img {
+        width: 40px;
+        height: 5vh;
+        border-radius: 50%;
+      }
+      .nb {
+        padding: 5px 20px;
+        color: black;
+        text-decoration: none;
+      }
+      .btn {
+        padding: 5px 5px;
+        text-decoration: none;
+        color: black;
+        background: rgb(184, 184, 246);
+        border: 1px solid grey;
+        border-radius: 5px;
+      }
+      .home-content {
+        display: flex;
+        padding: 15px;
+        margin: 5px;
+      }
+      .home-text {
+        margin: 5% 2%;
+        padding: 10px;
+        width: 40%;
+      }
+      .home-text h2 {
+        margin-bottom: 10%;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-style: oblique;
+      }
+      .home-text p {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin-bottom: 5%;
+      }
+      .expense-anchor {
+        text-decoration: underline;
+        font-style: italic;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <nav style="font-size: large; text-decoration: none">
+        <a class="logo" href="http://127.0.0.1:2000/" class="logo"
+          ><img
+            class="logo-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EsatEmgTp5koqh06Rj_PDojjITj9DahfzLQ0aVoAxA4ES_T1UexiFGaOytqUzeJVFtY&usqp=CAU"
+            alt="My App"
+        /></a>
+        <a class="nb" href="http://127.0.0.1:2000/">Home</a>
+        <a class="nb" href="http://127.0.0.1:2000/about">About</a>
+        <a class="nb" href="http://127.0.0.1:2000/expense">My Expense</a>
+        <a class="nb" href="http://127.0.0.1:2000/blogs">Blog</a>
+        <a class="nb" href="http://127.0.0.1:2000/contact">Contact Us</a>
+        <a class="btn" href="http://127.0.0.1:2000/login">Login</a>
+        <a class="btn" href="http://127.0.0.1:2000/Signin">Sign-up</a>
+      </nav>
+    </div>
+    <div class="home-content">
+      <img
+        class="home-img"
+        src="https://img.freepik.com/free-photo/work-deadline-concept-3d-illustration_107791-17713.jpg?size=626&ext=jpg&ga=GA1.1.193153137.1703649435&semt=sph"
+        alt="background"
+      />
+      <div class="home-text">
+        <h2>Welcome to Expense Tracker!</h2>
+        <p>
+          Track your spending, categorize your expenses, and gain control of
+          your finances.
+        </p>
+        <p>
+          Browse through our budgeting tips in the Blog, find financial
+          resources for inspiration, and contact us if you have any questions.
+        </p>
+        <p>
+          <a href="http://127.0.0.1:2000/expense" class="expense-anchor"
+            >Click</a
+          >
+          To calculate your expenses
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
