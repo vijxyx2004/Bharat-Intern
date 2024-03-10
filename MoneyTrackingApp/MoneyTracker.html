@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: rgba(235, 228, 228, 0.1);
+      }
+      .navbar {
+        padding: 10px 0px;
+        margin-bottom: 0px;
+        height: 5vh;
+        background: rgb(224, 195, 195);
+      }
+      .logo {
+        width: 40%;
+        margin-right: 40%;
+        margin-left: 1%;
+      }
+      .logo-img {
+        width: 40px;
+        height: 5vh;
+        border-radius: 50%;
+      }
+      .nb {
+        padding: 5px 20px;
+        color: black;
+        text-decoration: none;
+      }
+      .btn {
+        padding: 5px 5px;
+        text-decoration: none;
+        color: black;
+        background: rgb(184, 184, 246);
+        border: 1px solid grey;
+        border-radius: 5px;
+      }
+      .Expense-tracker {
+        display: flex;
+      }
+      .Expense-form {
+        width: 35%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        color: red;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #e5b1fa;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #1abc9c;
+      }
+
+      .Expense-tracker {
+        width: 100%;
+        height: 70vh;
+        justify-content: space-evenly;
+        margin: 3% 0px;
+      }
+      .Expense {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 50%;
+        display: block;
+        justify-content: space-between;
+        background-color: #fff3f3;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .Expense-detail {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+      }
+      .Expense-details {
+        width: 100%;
+        display: flex;
+        padding: 10px;
+      }
+
+      .Expense-detail p,
+      .Expense-details p {
+        text-align: center;
+        width: 24%;
+        margin: 3px auto;
+        flex-wrap: wrap;
+      }
+
+      strong {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <nav style="font-size: large; text-decoration: none">
+        <a class="logo" href="http://127.0.0.1:2000/" class="logo"
+          ><img
+            class="logo-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EsatEmgTp5koqh06Rj_PDojjITj9DahfzLQ0aVoAxA4ES_T1UexiFGaOytqUzeJVFtY&usqp=CAU"
+            alt="My App"
+        /></a>
+        <a class="nb" href="http://127.0.0.1:2000/">Home</a>
+        <a class="nb" href="http://127.0.0.1:2000/about">About</a>
+        <a class="nb" href="http://127.0.0.1:2000/expense">My Expense</a>
+        <a class="nb" href="http://127.0.0.1:2000/blogs">Blog</a>
+        <a class="nb" href="http://127.0.0.1:2000/contact">Contact Us</a>
+        <a class="btn" href="http://127.0.0.1:2000/login">Login</a>
+        <a class="btn" href="http://127.0.0.1:2000/Signin">Sign-up</a>
+      </nav>
+    </div>
+    <div class="Expense-tracker">
+      <div class="Expense" id="ExpenseDetails">
+        <div class="Expense-detail">
+          <p>
+            <strong>Expense Name</strong> <span id="displayExpenseName"></span>
+          </p>
+          <p><strong>Due Date</strong> <span id="displayDueDate"></span></p>
+          <!-- <p>
+            <strong>Expense Category</strong>
+            <span id="displayExpenseDescription"></span>
+          </p> -->
+          <p>
+            <strong>Expense Amount</strong>
+            <span id="displayExpenseAmount"></span>
+          </p>
+        </div>
+        {{%content%}}
+      </div>
+      <div class="Expense-form">
+        <h1>Add an Expense</h1>
+        <form action="/submit-Expense" method="get">
+          <input
+            type="text"
+            id="ExpenseName"
+            name="ExpenseName"
+            placeholder="Enter Expense Name"
+            required
+          />
+
+          <input
+            type="number"
+            id="ExpenseAmount"
+            name="ExpenseAmount"
+            placeholder="Enter Expense Amount"
+            required
+          />
+
+          <select id="expenseCategory" name="expenseCategory" required>
+            <option value="option3">Bills/EMI's Payments</option>
+            <option value="Donations">Donations</option>
+            <option value="option1">Food</option>
+            <option value="option2">Grocery</option>
+            <option value="Donations">Donations</option>
+            <option value="Savings">Savings</option>
+            <option value="option4">Shopping</option>
+            <option value="option5">Medical</option>
+            <option value="Travelling">Travelling</option>
+            <option value="Others">Others</option>
+          </select>
+
+          <input
+            type="date"
+            id="ExpenseDate"
+            name="ExpenseDate"
+            placeholder="Select Expense Date"
+            required
+          />
+
+          <button type="submit">Submit Expense</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function getCurrentDate() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = (today.getMonth() + 1).toString().padStart(2, "0");
+        const day = today.getDate().toString().padStart(2, "0");
+        return `${year}-${month}-${day}`;
+
+        document
+          .getElementById("ExpenseAmount")
+          .addEventListener("input", function () {
+            if (parseFloat(this.value) <= 0) {
+              this.setCustomValidity("Expense amount must be greater than 0.");
+            } else {
+              this.setCustomValidity("");
+            }
+          });
+      }
+      document.getElementById("ExpenseDate").value = getCurrentDate();
+    </script>
+  </body>
+</html>

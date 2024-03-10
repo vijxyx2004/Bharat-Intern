@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: rgba(235, 228, 228, 0.1);
+      }
+      .navbar {
+        padding: 10px 0px;
+        margin-bottom: 0px;
+        height: 5vh;
+        background: rgb(224, 195, 195);
+      }
+      .logo {
+        width: 40%;
+        margin-right: 40%;
+        margin-left: 1%;
+      }
+      .logo-img {
+        width: 40px;
+        height: 5vh;
+        border-radius: 50%;
+      }
+      .nb {
+        padding: 5px 20px;
+        color: black;
+        text-decoration: none;
+      }
+      .btn {
+        padding: 5px 5px;
+        text-decoration: none;
+        color: black;
+        background: rgb(184, 184, 246);
+        border: 1px solid grey;
+        border-radius: 5px;
+      }
+      .home-content {
+        display: flex;
+        padding: 15px;
+        margin: 5px;
+      }
+      .home-text {
+        margin: 5% 2%;
+        padding: 10px;
+        width: 40%;
+      }
+      .home-text h2 {
+        margin-bottom: 10%;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-style: oblique;
+      }
+      .home-text p {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        margin-bottom: 5%;
+      }
+
+      .login-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0px;
+        background-color: #f4f4f4;
+      }
+      .content {
+        width: auto;
+      }
+
+      .login-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* max-width: 400px; */
+        width: 100%;
+      }
+
+      h3 {
+        color: #333;
+        text-align: center;
+      }
+      form label {
+        width: 25%;
+        margin-right: 3%;
+      }
+
+      form input {
+        align-self: end;
+        width: 70%;
+        padding: 5px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        cursor: pointer;
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #207cca;
+      }
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+      }
+      .action-buttons a {
+        padding-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <nav style="font-size: large; text-decoration: none">
+        <a class="logo" href="http://127.0.0.1:2000/" class="logo"
+          ><img
+            class="logo-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EsatEmgTp5koqh06Rj_PDojjITj9DahfzLQ0aVoAxA4ES_T1UexiFGaOytqUzeJVFtY&usqp=CAU"
+            alt="My App"
+        /></a>
+        <a class="nb" href="http://127.0.0.1:2000/">Home</a>
+        <a class="nb" href="http://127.0.0.1:2000/about">About</a>
+        <a class="nb" href="http://127.0.0.1:2000/expense">My Expense</a>
+        <a class="nb" href="http://127.0.0.1:2000/blogs">Blog</a>
+        <a class="nb" href="http://127.0.0.1:2000/contact">Contact Us</a>
+        <a class="btn" href="http://127.0.0.1:2000/login">Login</a>
+        <a class="btn" href="http://127.0.0.1:2000/Signin">Sign-up</a>
+      </nav>
+    </div>
+    <div class="login-page">
+      <div class="content">
+        <div class="login-form">
+          <h3>SignIn</h3>
+          <form id=" user login-form" action="/register" method="get">
+            <label for="FirstName">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Mona"
+              required
+            /><br /><br />
+            <label for="LastName">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Lisa"
+              required
+            /><br /><br />
+
+            <label for="MobileNo"> Mobile No</label>
+            <input
+              type="number"
+              name="mobile"
+              id="mobile"
+              placeholder="999-888-0000"
+              required
+            /><br /><br />
+
+            <label for="Email">E-mail Id</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@gmail.com"
+              required
+            />
+            <br /><br />
+
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="password"
+              required
+            />
+            <br /><br />
+            <button type="submit" class="Save">Sign-Up</button><br /><br />
+          </form>
+          <div class="action-buttons">
+            <a href="#" class="Save">Already Have an Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

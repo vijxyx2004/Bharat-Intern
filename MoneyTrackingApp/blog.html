@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <style>
+      body {
+        margin: 0px;
+        background-color: rgba(235, 228, 228, 0.1);
+      }
+      .navbar {
+        padding: 10px 0px;
+        margin-bottom: 0px;
+        height: 5vh;
+        background: rgb(224, 195, 195);
+      }
+      .logo {
+        width: 40%;
+        margin-right: 40%;
+        margin-left: 1%;
+      }
+      .logo-img {
+        width: 40px;
+        height: 5vh;
+        border-radius: 50%;
+      }
+      .nb {
+        padding: 5px 20px;
+        color: black;
+        text-decoration: none;
+      }
+      .btn {
+        padding: 5px 5px;
+        text-decoration: none;
+        color: black;
+        background: rgb(184, 184, 246);
+        border: 1px solid grey;
+        border-radius: 5px;
+      }
+      .blog-adder {
+        display: flex;
+        width: 100%;
+        height: 10vh;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+      .blog-adder button {
+        padding: 5px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        height: fit-content;
+        background-color: rgb(254, 255, 192);
+        margin: 0px 10px;
+      }
+      .blog-adder form {
+        border: 1px solid rgb(237, 237, 237);
+        width: 80%;
+        padding: 5px 20px;
+        margin: 0px 3%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form input {
+        width: 25%;
+        margin: 0px 5% 0px 1%;
+      }
+      form textarea {
+        width: 35%;
+        margin: 0px 5% 0px 1%;
+      }
+      .blog-displayer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <nav style="font-size: large; text-decoration: none">
+        <a class="logo" href="http://127.0.0.1:2000/" class="logo"
+          ><img
+            class="logo-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9EsatEmgTp5koqh06Rj_PDojjITj9DahfzLQ0aVoAxA4ES_T1UexiFGaOytqUzeJVFtY&usqp=CAU"
+            alt="My App"
+        /></a>
+        <a class="nb" href="http://127.0.0.1:2000/">Home</a>
+        <a class="nb" href="http://127.0.0.1:2000/about">About</a>
+        <a class="nb" href="http://127.0.0.1:2000/expense">My Expense</a>
+        <a class="nb" href="http://127.0.0.1:2000/blogs">Blog</a>
+        <a class="nb" href="http://127.0.0.1:2000/contact">Contact Us</a>
+        <a class="btn" href="http://127.0.0.1:2000/login">Login</a>
+        <a class="btn" href="http://127.0.0.1:2000/Signin">Sign-up</a>
+      </nav>
+    </div>
+    <div class="blogpage">
+      <div class="blog-caption">
+        <h1 style="text-align: center; padding: 5px">Blog</h1>
+      </div>
+      <div>
+        <div class="blog-adder">
+          <form action="/newpost" method="get">
+            <label for="Title">Blog Title</label>
+            <input
+              type="text"
+              id="Title"
+              name="Title"
+              placeholder="My Blog Title"
+              required
+            />
+            <label for="description">Content</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              placeholder="Detailed description"
+              required
+            ></textarea>
+
+            <button type="submit">Add a Post</button>
+          </form>
+          <button onclick="reloadPage()">Reload</button>
+        </div>
+        <div class="blog-displayer">{{%blog%}}</div>
+      </div>
+    </div>
+    <script>
+      function reloadPage() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>
